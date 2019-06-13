@@ -1,8 +1,9 @@
 			<main class="cartContainer">
 
-				<!-- <?php //if (!isset($_SESSION['bracket'])): ?> -->
+				<?php if (!isset($_SESSION['bracket'])): ?>
 
 					<h1>Vaša korpa je prazna!</h1>
+				<?php else: ?>	
 					<?php 
 					if(!isset($_SESSION['cart'])){
 		   	 			$_SESSION['cart'] = array();
@@ -98,7 +99,7 @@
 						 }
 					}
 				 ?>
-
+				<?php endif; ?>
 					<!-- <a class="cartBtnn" href="<?php //echo WEBROOT; ?>/products/all">Nazad u proizvode</a>
 				<div class="cartTable">
 					<h1>Vaša korpa<img class="cartIcon" src="<?php// echo WEBROOT; ?>/assets/css/pictures/cart.png"></h1>
